@@ -1,0 +1,35 @@
+{
+	"objectrules":
+	[
+		{"dependency":"dobj","swap":false,"strict":true},
+		{"dependency":"cop","swap":true,"strict":false},
+		{"dependency":"xcomp","swap":false,"strict":true},
+		{"dependency":"ccomp","swap":false,"strict":true},
+		{"dependency":"nmod","swap":false,"strict":false},
+		{"dependency":"nmod:tmod","swap":false,"strict":false},
+		{"dependency":"nmod:npmod","swap":false,"strict":false}
+	],
+	"subjectrules":
+	[
+		{"dependency":"nsubj"},
+	    {"dependency":"nsubjpass"},
+		{"dependency":"csubj"},
+		{"dependency":"csubjpass"}
+	],
+	"clauserules":
+	[
+		{"dependency":"advcl","component":false},
+		{"dependency":"acl","component":false},
+		{"dependency":"acl:relcl","component":false},
+		{"dependency":"parataxis","component":true},
+	    {"dependency":"root","component":true}
+	],
+	"branchrules":
+	{
+		"subject":["amod","nmod","nmod:tmod","nmod:npmod","det","case","nummod","mwe","cc","cc:preconj","det:predet","nmod:poss","compound","conj","appos","neg","acl","acl:relcl","advmod","punct"],
+		"predicate":["amod","vmod","cop","det","case","nummod","tomark","compound","compound:prt","aux","auxpass","neg","iobj"],
+		"object":["amod","nmod","nmod:tmod","nmod:npmod","det","nummod","mwe","cc","cc:preconj","det:predet","nmod:poss","compound","conj","appos","neg","nsubj","advcl","acl","acl:relcl","dobj","xcomp","nsubjpass","ccomp","dep","root","whsubj","prpsubj","csubjpass","case","mark","aux","auxpass","punct","advmod","cop"],
+		"object->predicate":["vmod","tomark","compound:prt","iobj"],
+		"predicate->object":["nmod","nmod:tmod","nmod:npmod","dep","prpsubj"]
+	}
+}
